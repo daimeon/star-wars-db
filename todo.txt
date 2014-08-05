@@ -1,1 +1,2 @@
 - setup git #
+- connect with PHPStorm
