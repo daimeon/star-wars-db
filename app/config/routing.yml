@@ -1,0 +1,5 @@
+page_impressum:                 # the identifier
+    pattern:  /impressum        # the route
+    defaults: { _controller:  YourIdentifierYourBundle:Page:impressum }  # the controller + action
+    requirements:
+        _method:  GET           # restraints
