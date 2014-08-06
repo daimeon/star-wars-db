@@ -19,6 +19,6 @@ class PageController extends Controller
      */
     public function impressumAction()
     {
-        return $this->render('dmoritzStarWarsDb:Page\static:impressum.html.twig');
+        return $this->render('StarWarsDb:Page\static:impressum.html.twig');
     }
 }
