@@ -5,7 +5,7 @@
  * Date: 06.08.14
  * Time: 11:35
  */
-namespace dmoritz\StarWarsDb\Controller;
+namespace StarWarsDb\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
