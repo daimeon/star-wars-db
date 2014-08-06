@@ -1,0 +1,48 @@
+<!-- /src/dmoritz/StarWarsDb/Resources/views/base.html.twig -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>{% block title %}Default for variable title part {% endblock %} - constant title part</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    {% block stylesheets %}
+        <link href="{{ asset('css/main.css') }}" type="text/css" rel="stylesheet" />
+    {% endblock %}
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <h1>Page Name</h1>
+        {% block navigation %}
+            <nav>
+                <ul class="navigation">
+                    <li><a href="{{ path('page_impressum') }}">Impressum</a></li>
+                </ul>
+            </nav>
+        {% endblock %}
+    </header>
+
+    <section class="main">
+        {% block body %}{% endblock %}
+    </section>
+    <aside class="sidebar-right">
+
+        {% block sidebarright %}Right Sidebar{% endblock %}
+    </aside>
+
+    <aside class="sidebar-left">
+        {% block sidebarleft %}{% endblock %}
+    </aside>
+
+    <div id="footer">
+        {% block footer %}
+            Maybe a link to your privacy settings, a link to Symfony2, whatever.
+        {% endblock %}
+    </div>
+    {% block javascripts %}{% endblock %}
+</div>
+</body>
+</html>
