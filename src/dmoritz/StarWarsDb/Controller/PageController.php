@@ -6,8 +6,7 @@
  * Time: 11:35
  */
 namespace StarWarsDb\Controller;
-var_dump("We are here");
-die;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -20,6 +19,7 @@ class PageController extends Controller
      */
     public function impressumAction()
     {
+        var_dump("now inside the Action");die;
         return $this->render('StarWarsDb:Page\static:impressum.html.twig');
     }
 }
