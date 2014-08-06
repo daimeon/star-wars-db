@@ -1,4 +1,7 @@
 <?php
+
+var_dump("We are here");
+die;
 /**
  * Created by PhpStorm.
  * User: dmoritz
