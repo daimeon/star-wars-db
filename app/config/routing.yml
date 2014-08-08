@@ -3,3 +3,9 @@ page_impressum:                 # the identifier
     defaults: { _controller:  StarWarsDb:Page:impressum }  # the controller + action
     requirements:
         _method:  GET           # restraints
+
+page_contact:                 # the identifier
+    pattern:  /contact        # the route
+    defaults: { _controller:  StarWarsDb:Page:contact }  # the controller + action
+    requirements:
+        _method:  GET           # restraints
