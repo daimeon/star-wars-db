@@ -22,6 +22,12 @@ class PageController extends Controller
         return $this->render('StarWarsDb:Page\static:impressum.html.twig');
     }
 
+    /**
+     * displays as well as processes contact page.
+     *
+     * @Route("/contact", name="page_contact")
+     * @Template("YourIdentifierYourBundle:Page:contact.html.twig")
+     */
     public function contactAction()
     {
         // creating the contact entity and the form
