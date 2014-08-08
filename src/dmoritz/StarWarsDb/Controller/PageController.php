@@ -21,4 +21,38 @@ class PageController extends Controller
     {
         return $this->render('StarWarsDb:Page\static:impressum.html.twig');
     }
+
+    public function contactAction()
+    {
+        // creating the contact entity and the form
+        $contact = new Contact();
+        $form = $this->createForm(new ContactType(), $contact);
+
+        // if request is post, validate form and send mail
+        $request = $this->getRequest();
+        if ($request->getMethod() == 'POST') {
+            $form->bindRequest($request);
+            if ($form->isValid()) {
+                $this->sendEmail($contact);
+            }
+        }
+
+        // pass the generated form in the variable $form to the
+        // template defined by the @Template annotation
+        return array('form' => $form->createView());
+    }
+
+    /**
+     * @param Contact $contact
+     * @return type 1 (true) if send successfully, 0 (false) otherwise
+     */
+    private function sendEmail($contact) {
+        $message = \Swift_Message::newInstance()
+            ->setSubject('Contact from example.com')
+            ->setFrom('contact@example.com')
+            ->setTo('yourmail@example.com')
+            ->setBody($this->renderView('YourIdentifierYourBundle:Page:email.txt.twig', array('contact' => $contact)))
+        ;
+        return $this->get('mailer')->send($message);
+    }
 }
