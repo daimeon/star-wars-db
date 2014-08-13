@@ -77,14 +77,13 @@
             </nav>
         {% endblock %}
     </header>
-    <div id="content" class="row-fluid">
-        <div class="span9 main">
-            <section class="main">
-                {% block body %}{% endblock %}
-            </section>
-        </div>
-        <div class="span3 sidebar">
-            <h2>Sidebar</h2>
+    <div class="container group first">
+        <div class=""full-width">
+            <div class="span9 main">
+                <section class="main">
+                    {% block body %}{% endblock %}
+                </section>
+            </div>
         </div>
     </div>
     {% block javascripts %}{% endblock %}
