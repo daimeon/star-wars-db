@@ -80,10 +80,13 @@
     </header>
     <div class="container group first">
         <div class=""full-width">
-            <div class="span9 main">
-                <section class="main">
+            <div class="row">
+                <div class="col-md-8">
                     {% block body %}{% endblock %}
-                </section>
+                </div>
+                <div class="col-md-4">
+                    {% block sidebar %}{% endblock %}
+                </div>
             </div>
         </div>
     </div>
